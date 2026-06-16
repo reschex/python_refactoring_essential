@@ -1,7 +1,7 @@
 class X1:
 
     @staticmethod
-    def calculate_accumulated_sum(start, end):
+    def calculate_accumulated_sum_of_squares(start, end):
         acc_sum = 0
 
         for i in range(start, end + 1):
