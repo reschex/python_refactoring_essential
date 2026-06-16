@@ -41,12 +41,15 @@ class Order:
 
         # Tax calculation
         taxable_amount = subtotal - discount
-        tax = taxable_amount * 0.20
+        tax = self.get_tax(taxable_amount)
 
         # Total calculation
         total = taxable_amount + tax
 
         return OrderSummary(subtotal, discount, tax, total)
+
+    def get_tax(self, taxable_amount):
+        return taxable_amount * 0.20
 
     def get_discount(self, subtotal):
         discount = 0.0
