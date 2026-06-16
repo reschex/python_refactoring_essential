@@ -30,20 +30,13 @@ class Order:
         self.customer = customer
 
     def summarise(self) -> OrderSummary:
-        # Validation
         self.validate()
-
-        # Subtotal calculation
         subtotal = self.get_subtotal()
-
-        # Discount rules
         discount = self.get_discount(subtotal)
 
-        # Tax calculation
         taxable_amount = subtotal - discount
         tax = self.get_tax(taxable_amount)
 
-        # Total calculation
         total = taxable_amount + tax
 
         return OrderSummary(subtotal, discount, tax, total)
