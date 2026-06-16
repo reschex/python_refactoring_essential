@@ -2,12 +2,12 @@ class X1:
 
     @staticmethod
     def calculate_accumulated_sum_of_squares(start, end):
-        acc_sum = 0
+        accumulated_sum = 0
 
         for i in range(start, end + 1):
-            acc_sum += X1.calculate_square(i)
+            accumulated_sum += X1.calculate_square(i)
 
-        return acc_sum
+        return accumulated_sum
 
     @staticmethod
     def calculate_square(num):
