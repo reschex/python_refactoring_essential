@@ -1,7 +1,7 @@
 class X1:
 
     @staticmethod
-    def m(start, end):
+    def calculate_accumulated_sum(start, end):
         acc_sum = 0
 
         # Iterate from lower bound (q) to upper bound (z)
